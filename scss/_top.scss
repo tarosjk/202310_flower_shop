@@ -17,6 +17,7 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 a {
@@ -271,3 +272,43 @@ ol {
     }
   }
 } //.global-nav
+
+.mv {
+  height: 85vh;
+
+  &__panel {
+    // border-bottom-right-radius: 50% 30px;
+    // border-bottom-left-radius: 50% 30px;
+    // overflow: hidden;
+    height: 100%;
+    position: relative;
+
+    img {
+      clip-path: inset(0 0 15px 0);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // object-position: center center;
+    }
+
+    &::after {
+      content: "";
+      background: var(--image) no-repeat center center;
+      background-size: cover;
+      mask-image: url(../img/curve.svg);
+      mask-repeat: no-repeat;
+      mask-position: center bottom;
+      mask-size: 100% 15px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
