@@ -171,7 +171,7 @@ ol {
     height: 30px;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
 
     span {
       text-indent: 100%;
@@ -211,7 +211,7 @@ ol {
     height: 100%;
     overflow: auto;
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
   }
 
   &-toggler:checked ~ &-btn span {
@@ -233,7 +233,7 @@ ol {
     height: auto;
     overflow: auto;
     opacity: 1;
-    z-index: initial;
+    z-index: 2;
     backdrop-filter: blur(0px);
     background-color: transparent;
     display: block;
@@ -340,10 +340,11 @@ ol {
   position: absolute;
   bottom: 10%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(90deg);
   color: #fff;
   font-size: 0.8rem;
   z-index: 1;
+  animation: scroll-indicator 1s infinite;
 
   &::before {
     content: "";
@@ -353,5 +354,26 @@ ol {
     top: 0;
     left: 0;
     background-color: #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    top: 0;
+    right: -10%;
+    background: #fff;
+    transform: rotate(30deg);
+    transform-origin: right bottom;
+  }
+}
+
+@keyframes scroll-indicator {
+  0%,
+  100% {
+    transform: translateY(0) translateX(-50%) rotate(90deg);
+  }
+  50% {
+    transform: translateY(15px) translateX(-50%) rotate(90deg);
   }
 }
