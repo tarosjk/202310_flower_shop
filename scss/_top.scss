@@ -103,6 +103,29 @@ ol {
   }
 }
 
+.bg-inbetween {
+  height: 55vh;
+  position: relative;
+
+  &__inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    clip-path: inset(0 0 0 0);
+  }
+
+  img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+}
+
 // ヘッダー
 .global-nav {
   position: fixed;

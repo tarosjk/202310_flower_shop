@@ -6,3 +6,7 @@ $('.mv').slick({
   arrows: false,
   swipe: false,
 })
+
+window.addEventListener('load', () => {
+  AOS.init()
+})
