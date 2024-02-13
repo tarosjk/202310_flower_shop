@@ -377,3 +377,45 @@ ol {
     transform: translateY(15px) translateX(-50%) rotate(90deg);
   }
 }
+
+// イントロダクション
+.introduction {
+  margin-top: 100px;
+  padding-bottom: 50px;
+
+  &__head {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    img {
+      width: 50%;
+      margin-left: auto;
+    }
+  }
+
+  // PC =====
+  @include mq {
+    &__container {
+      display: flex;
+    }
+
+    &__text {
+      flex-basis: 65%;
+      flex-shrink: 0;
+    }
+
+    &__lead {
+      max-width: 25rem;
+    }
+
+    &__img {
+      img {
+        width: auto;
+        margin-left: 0;
+      }
+    }
+  }
+} //.introduction
