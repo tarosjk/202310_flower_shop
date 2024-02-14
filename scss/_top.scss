@@ -504,3 +504,57 @@ ol {
     }
   }
 } //.news
+
+// イベント（今月のお花教室）
+.event {
+  &__container {
+    > div:first-child {
+      margin-bottom: 60px;
+    }
+  }
+
+  &-article {
+    &__img {
+      margin-bottom: 2rem;
+    }
+
+    &__head {
+      font-weight: normal;
+      border-bottom: 1px dotted var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    &__text {
+      max-width: 400px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__btn-area {
+    text-align: center;
+  }
+
+  // PC =====
+  @include mq {
+    &__container {
+      display: flex;
+      // justify-content: space-between;
+      gap: 10%;
+
+      > div {
+        // width: 45%;
+        flex-basis: 50%;
+      }
+    }
+
+    &-article {
+      &__img {
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+} //.event
+
+
