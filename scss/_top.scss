@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--text);
   line-height: 2;
@@ -300,7 +304,9 @@ ol {
 } //.global-nav
 
 .mv {
-  height: 85vh;
+  // height: 85vh;
+  // height: 85dvh;
+  height: 85svh;
 
   // slick
   .slick-list,
@@ -449,6 +455,8 @@ ol {
 // ニュース
 .news {
   &__list {
+    overflow: hidden;
+
     li {
       &:not(:first-child) {
         margin-top: 50px;
@@ -600,5 +608,33 @@ ol {
         width: 300px;
       }
     }
+  }
+}
+
+// フッター
+.site-footer {
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  .pagetop {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  &__logo {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .copyright {
+    display: block;
+    text-align: center;
   }
 }
