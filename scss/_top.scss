@@ -557,4 +557,48 @@ ol {
   }
 } //.event
 
+// 店舗情報
+.access {
+  &__container {
+    > div:first-child {
+      margin-bottom: 60px;
+    }
+  }
 
+  &__shopinfo {
+    dd {
+      font-size: 1.125rem;
+      border-bottom: 1px dotted var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__map {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+  }
+
+  &__contact {
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  // PC =====
+  @include mq {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > div:first-child {
+        width: 40%;
+      }
+
+      > div:nth-child(2) {
+        width: 300px;
+      }
+    }
+  }
+}
